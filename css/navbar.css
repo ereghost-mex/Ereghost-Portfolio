@@ -1,0 +1,75 @@
+/* ==========================
+NAVBAR
+========================== */
+
+.navbar{
+
+    background:rgba(10,10,10,.75);
+    backdrop-filter:blur(12px);
+    transition:.4s;
+    padding:15px 0;
+
+}
+
+.logo{
+
+    color:var(--primary)!important;
+    font-weight:700;
+    font-size:1.5rem;
+
+}
+
+.navbar-nav{
+
+    gap:15px;
+
+}
+
+.nav-link{
+
+    color:white!important;
+    position:relative;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:var(--primary)!important;
+
+}
+
+.nav-link::after{
+
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+
+    width:0%;
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+.nav-link.active{
+
+    color:var(--primary)!important;
+
+}
+
+.navbar-toggler{
+
+    color:white;
+
+}
