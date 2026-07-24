@@ -20,7 +20,7 @@ form.addEventListener("submit", function(e){
 
         "service_1k41afv",
 
-        "template_99884im",
+        "template_7u8ks7r",
 
         params
 
