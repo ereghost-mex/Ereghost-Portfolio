@@ -1,23 +1,45 @@
-document.getElementById("contactForm").addEventListener("submit", function(e){
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
+    const params = {
 
-    const email = document.getElementById("email").value.trim();
+        from_name: document.getElementById("name").value,
 
-    const message = document.getElementById("message").value.trim();
+        from_email: document.getElementById("email").value,
 
-    if(name==="" || email==="" || message===""){
+        subject: document.getElementById("subject").value,
 
-        alert("Please fill all required fields.");
+        message: document.getElementById("message").value
 
-        return;
+    };
 
-    }
+    emailjs.send(
 
-    alert("✅ Thank you! Your message has been submitted.");
+        "service_1k41afv",
 
-    this.reset();
+        "template_99884im",
+
+        params
+
+    )
+
+    .then(function(){
+
+        alert("✅ Message sent successfully!");
+
+        form.reset();
+
+    })
+
+    .catch(function(error){
+
+        console.log(error);
+
+        alert("❌ Failed to send message.");
+
+    });
 
 });
