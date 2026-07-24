@@ -18,9 +18,9 @@ form.addEventListener("submit", function(e){
 
     emailjs.send(
 
-        "service_1k41afv",
+        "service_jn2clng",
 
-        "template_7u8ks7r",
+        "template_rmeeqk8",
 
         params
 
@@ -42,4 +42,4 @@ form.addEventListener("submit", function(e){
 
     });
 
-});
+}); 
